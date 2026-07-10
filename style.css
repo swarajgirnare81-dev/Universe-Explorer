@@ -600,3 +600,39 @@ transition:.4s;
 transform:scale(1.05);
 
 }
+
+/* Continent Buttons */
+
+.card button{
+
+padding:12px 25px;
+
+margin:10px;
+
+border:none;
+
+border-radius:30px;
+
+background:linear-gradient(
+45deg,
+cyan,
+blue
+);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 20px cyan;
+
+}
