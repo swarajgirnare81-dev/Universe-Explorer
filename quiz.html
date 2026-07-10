@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🧠 Universe Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="hero">
+
+<h1>🧠 Universe Quiz</h1>
+
+<p>Test your Earth and Space knowledge 🚀</p>
+
+<a href="index.html">
+<button>🏠 Home</button>
+</a>
+
+</header>
+
+
+
+<main class="container">
+
+
+<section class="card">
+
+
+<h2>Question 1</h2>
+
+<p>Which planet is known as the Red Planet?</p>
+
+<button onclick="checkAnswer('wrong')">
+Earth
+</button>
+
+<button onclick="checkAnswer('correct')">
+Mars
+</button>
+
+<button onclick="checkAnswer('wrong')">
+Jupiter
+</button>
+
+
+
+<h2>Question 2</h2>
+
+<p>How many continents are there on Earth?</p>
+
+<button onclick="checkAnswer('correct')">
+7
+</button>
+
+<button onclick="checkAnswer('wrong')">
+5
+</button>
+
+<button onclick="checkAnswer('wrong')">
+10
+</button>
+
+
+
+<h2>Question 3</h2>
+
+<p>Which galaxy contains our Solar System?</p>
+
+<button onclick="checkAnswer('correct')">
+Milky Way
+</button>
+
+<button onclick="checkAnswer('wrong')">
+Andromeda
+</button>
+
+<button onclick="checkAnswer('wrong')">
+Whirlpool
+</button>
+
+
+<h2 id="score">
+Score: 0
+</h2>
+
+
+</section>
+
+
+</main>
+
+
+
+<script src="quiz.js"></script>
+
+
+</body>
+
+</html>
