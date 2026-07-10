@@ -1,127 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>🌍 Universe Explorer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Explore planets, stars, black holes, continents, countries, NASA images, quizzes and much more with Universe Explorer.">
+<title>🌍 Universe Explorer</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta name="description" content="Explore Earth, planets, space, countries and the universe.">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <header class="hero">
 
-    <h1>🌍 Universe Explorer</h1>
+<h1>🌍 Universe Explorer</h1>
 
-    <p>
-        Explore Earth, Space and Beyond
-    </p>
+<p>
+Explore Earth, Space and Beyond 🚀
+</p>
 
-    <input
+
+<input 
+id="searchBox"
 type="text"
-placeholder="🔎 Search Countries, Continents, Planets..."
+placeholder="🔎 Search planets, countries, continents..."
 >
 
+
 <div class="button-group">
+
 
 <button id="exploreBtn">
 🚀 Explore Now
 </button>
 
+
 <button id="darkModeBtn">
 🌙 Dark Mode
 </button>
+
 
 <button id="voiceBtn">
 🎙️ Voice Search
 </button>
 
-<button id="randomCountryBtn">
-🌍 Random Country
-</button>
 
 <button id="randomPlanetBtn">
 🪐 Random Planet
 </button>
 
+
+<button id="randomCountryBtn">
+🌍 Random Country
+</button>
+
+
 </div>
+
 
 </header>
 
+
+
 <nav>
 
-    <a href="earth.html">🌎 Earth</a>
 
-    <a href="continents.html">🌍 Continents</a>
+<a href="earth.html">🌎 Earth</a>
 
-    <a href="countries.html">🏳️ Countries</a>
+<a href="continents.html">🌍 Continents</a>
 
-    <a href="space.html">🚀 Space</a>
+<a href="countries.html">🏳️ Countries</a>
 
-    <a href="planets.html">🪐 Planets</a>
+<a href="space.html">🚀 Space</a>
 
-    <a href="#stars">⭐ Stars</a>
+<a href="planets.html">🪐 Planets</a>
 
-    <a href="#blackholes">🕳️ Black Holes</a>
+<a href="#quiz">🧠 Quiz</a>
 
-    <a href="#quiz">🧠 Quiz</a>
-
-    <a href="#favorites">⭐ Favorites</a>
 
 </nav>
 
+
+
+
 <main class="container">
 
-<section id="earth" class="card">
+
+
+<section class="card">
+
 <h2>🌎 Earth Explorer</h2>
-<p>Discover our amazing planet, oceans, mountains, rivers and geography.</p>
+
+<p>
+Discover oceans, mountains, forests, wildlife and geography.
+</p>
+
+<a href="earth.html">
+<button>Explore Earth</button>
+</a>
+
 </section>
 
-<section id="continents" class="card">
-<h2>🌍 Continents</h2>
-<p>Explore all seven continents with maps, facts and beautiful images.</p>
+
+
+
+<section class="card">
+
+<h2>🌍 Continents Explorer</h2>
+
+<p>
+Explore the seven continents and their amazing facts.
+</p>
+
+<a href="continents.html">
+<button>Explore Continents</button>
+</a>
+
 </section>
 
-<section id="countries" class="card">
-<h2>🏳️ Countries</h2>
-<p>Learn about every country, its capital, flag, population, language and culture.</p>
+
+
+
+<section class="card">
+
+<h2>🏳️ Countries Explorer</h2>
+
+<p>
+Learn about countries, capitals, flags, cultures and history.
+</p>
+
+<a href="countries.html">
+<button>Explore Countries</button>
+</a>
+
 </section>
 
-<section id="space" class="card">
+
+
+
+<section class="card">
+
 <h2>🚀 Space Explorer</h2>
-<p>Journey through space, galaxies, nebulae and amazing discoveries.</p>
+
+<p>
+Discover galaxies, stars, missions and space mysteries.
+</p>
+
+<a href="space.html">
+<button>Explore Space</button>
+</a>
+
 </section>
 
-<section id="planets" class="card">
-<h2>🪐 Planets</h2>
-<p>Explore every planet in our Solar System with detailed information.</p>
+
+
+
+
+<section class="card">
+
+<h2>🪐 Planets Explorer</h2>
+
+<p>
+Learn about every planet in our Solar System.
+</p>
+
+<a href="planets.html">
+<button>Explore Planets</button>
+</a>
+
 </section>
 
-<section id="stars" class="card">
-<h2>⭐ Stars</h2>
-<p>Learn about stars, constellations, supernovae and stellar evolution.</p>
-</section>
 
-<section id="blackholes" class="card">
-<h2>🕳️ Black Holes</h2>
-<p>Discover one of the universe's greatest mysteries.</p>
-</section>
+
 
 <section id="quiz" class="card">
+
 <h2>🧠 Quiz Zone</h2>
-<p>Challenge yourself with geography and astronomy quizzes.</p>
+
+<p>
+Test your knowledge about Earth and the Universe.
+</p>
+
+<button id="quizBtn">
+Start Quiz
+</button>
+
 </section>
 
-<section id="favorites" class="card">
-<h2>⭐ Favorites</h2>
-<p>Save your favorite countries, places and planets.</p>
-</section>
+
+
 
 </main>
+
+
+
 
 <footer>
 
@@ -131,7 +210,11 @@ placeholder="🔎 Search Countries, Continents, Planets..."
 
 </footer>
 
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
