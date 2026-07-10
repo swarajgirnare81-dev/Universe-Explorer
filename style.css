@@ -574,3 +574,29 @@ padding:20px;
 }
 
 /* End of Universe Explorer CSS */
+
+/* Planet Images */
+
+.planet-image{
+
+width:100%;
+
+max-width:500px;
+
+display:block;
+
+margin:20px auto;
+
+border-radius:20px;
+
+box-shadow:0 0 25px cyan;
+
+transition:.4s;
+
+}
+
+.planet-image:hover{
+
+transform:scale(1.05);
+
+}
