@@ -171,8 +171,80 @@ alert("🌍 Random Country: "+random);
 
 // Search System
 
-const searchBox =
-document.getElementById("searchBox");
+const searchBox = document.getElementById("searchBox");
+
+if(searchBox){
+
+searchBox.addEventListener("keypress", function(event){
+
+if(event.key === "Enter"){
+
+let search =
+searchBox.value.toLowerCase();
+
+
+if(search.includes("earth")){
+window.location.href="earth.html";
+}
+
+
+else if(
+search.includes("planet") ||
+search.includes("mars") ||
+search.includes("jupiter") ||
+search.includes("saturn")
+){
+
+window.location.href="planets.html";
+
+}
+
+
+else if(
+search.includes("country") ||
+search.includes("india") ||
+search.includes("japan")
+){
+
+window.location.href="countries.html";
+
+}
+
+
+else if(
+search.includes("continent") ||
+search.includes("asia") ||
+search.includes("africa")
+){
+
+window.location.href="continents.html";
+
+}
+
+
+else if(
+search.includes("space") ||
+search.includes("star") ||
+search.includes("galaxy")
+){
+
+window.location.href="space.html";
+
+}
+
+
+else{
+
+alert("🔎 No matching section found!");
+
+}
+
+
+}
+
+});
+
+}
 
 
 if(searchBox){
