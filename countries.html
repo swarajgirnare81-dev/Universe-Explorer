@@ -1,105 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏳️ Countries | Universe Explorer</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🏳️ Countries Explorer | Universe Explorer</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
+
 
 <header class="hero">
 
-    <h1>🏳️ Countries Explorer</h1>
+<h1>🏳️ Countries Explorer</h1>
 
-    <p>
-        Explore countries around the world.
-    </p>
+<p>
+Discover countries, cultures, capitals and facts.
+</p>
 
-    <a href="index.html">
-        <button>🏠 Back to Home</button>
-    </a>
+
+<input 
+id="countrySearch"
+type="text"
+placeholder="🔎 Search Country..."
+>
+
+
+<br>
+
+<a href="index.html">
+<button>🏠 Back to Home</button>
+</a>
 
 </header>
 
-<main class="container">
 
-<section class="card">
+
+
+<main class="container" id="countryContainer">
+
+
+
+<section class="card country-card">
 
 <h2>🇮🇳 India</h2>
 
-<p><strong>Capital:</strong> New Delhi</p>
-<p><strong>Continent:</strong> Asia</p>
-<p><strong>Population:</strong> 1.4+ Billion</p>
-<p><strong>Currency:</strong> Indian Rupee (₹)</p>
-<p><strong>Language:</strong> Hindi and English (official at the Union level, with many regional languages)</p>
+<p>
+🏙️ Capital: New Delhi<br>
+🌍 Continent: Asia<br>
+💰 Currency: Indian Rupee (₹)<br>
+🗣️ Languages: Hindi, English and many regional languages<br>
+⭐ Famous For: Taj Mahal, Himalayas, rich culture
+</p>
 
 </section>
 
-<section class="card">
+
+
+
+<section class="card country-card">
 
 <h2>🇯🇵 Japan</h2>
 
-<p><strong>Capital:</strong> Tokyo</p>
-<p><strong>Continent:</strong> Asia</p>
-<p><strong>Currency:</strong> Japanese Yen (¥)</p>
-<p><strong>Language:</strong> Japanese</p>
+<p>
+🏙️ Capital: Tokyo<br>
+🌍 Continent: Asia<br>
+💰 Currency: Japanese Yen (¥)<br>
+🗣️ Language: Japanese<br>
+⭐ Famous For: Technology, Mount Fuji, anime culture
+</p>
 
 </section>
 
-<section class="card">
+
+
+
+<section class="card country-card">
 
 <h2>🇺🇸 United States</h2>
 
-<p><strong>Capital:</strong> Washington, D.C.</p>
-<p><strong>Continent:</strong> North America</p>
-<p><strong>Currency:</strong> US Dollar ($)</p>
-<p><strong>Language:</strong> English (de facto)</p>
+<p>
+🏙️ Capital: Washington D.C.<br>
+🌍 Continent: North America<br>
+💰 Currency: US Dollar ($)<br>
+🗣️ Language: English<br>
+⭐ Famous For: NASA, technology, landmarks
+</p>
 
 </section>
 
-<section class="card">
+
+
+
+<section class="card country-card">
 
 <h2>🇧🇷 Brazil</h2>
 
-<p><strong>Capital:</strong> Brasília</p>
-<p><strong>Continent:</strong> South America</p>
-<p><strong>Currency:</strong> Brazilian Real</p>
-<p><strong>Language:</strong> Portuguese</p>
+<p>
+🏙️ Capital: Brasília<br>
+🌍 Continent: South America<br>
+💰 Currency: Brazilian Real<br>
+🗣️ Language: Portuguese<br>
+⭐ Famous For: Amazon Rainforest, football
+</p>
 
 </section>
 
-<section class="card">
+
+
+
+<section class="card country-card">
 
 <h2>🇫🇷 France</h2>
 
-<p><strong>Capital:</strong> Paris</p>
-<p><strong>Continent:</strong> Europe</p>
-<p><strong>Currency:</strong> Euro (€)</p>
-<p><strong>Language:</strong> French</p>
+<p>
+🏙️ Capital: Paris<br>
+🌍 Continent: Europe<br>
+💰 Currency: Euro (€)<br>
+🗣️ Language: French<br>
+⭐ Famous For: Eiffel Tower, art and fashion
+</p>
 
 </section>
 
-<section class="card">
+
+
+
+<section class="card country-card">
 
 <h2>🇦🇺 Australia</h2>
 
-<p><strong>Capital:</strong> Canberra</p>
-<p><strong>Continent:</strong> Australia</p>
-<p><strong>Currency:</strong> Australian Dollar</p>
-<p><strong>Language:</strong> English</p>
+<p>
+🏙️ Capital: Canberra<br>
+🌍 Continent: Australia<br>
+💰 Currency: Australian Dollar<br>
+🗣️ Language: English<br>
+⭐ Famous For: Great Barrier Reef, unique wildlife
+</p>
 
 </section>
 
+
+
+
 </main>
+
+
+
 
 <footer>
 
-<p>🌍 Universe Explorer | Countries Explorer</p>
+<p>
+🌍 Universe Explorer | Countries Explorer
+</p>
 
 </footer>
 
+
+
 <script src="script.js"></script>
 
+
+<script>
+
+const search =
+document.getElementById("countrySearch");
+
+
+search.addEventListener("keyup",()=>{
+
+let value =
+search.value.toLowerCase();
+
+
+let countries =
+document.querySelectorAll(".country-card");
+
+
+countries.forEach(country=>{
+
+
+if(country.innerText.toLowerCase().includes(value)){
+
+country.style.display="block";
+
+}
+
+else{
+
+country.style.display="none";
+
+}
+
+
+});
+
+
+});
+
+</script>
+
+
+
 </body>
+
 </html>
