@@ -1,181 +1,277 @@
-/* ==========================================
-   UNIVERSE EXPLORER
-   SCRIPT.JS
-   PART 1
-========================================== */
+// 🌍 Universe Explorer Advanced JavaScript
 
-// Welcome Message
 
-window.onload = function () {
+// Dark Mode
 
-    console.log("🌍 Welcome to Universe Explorer!");
+const darkModeBtn = document.getElementById("darkModeBtn");
 
-};
+if(darkModeBtn){
+
+darkModeBtn.addEventListener("click",()=>{
+
+document.body.classList.toggle("dark-mode");
+
+});
+
+}
+
+
+
 
 // Explore Button
 
 const exploreBtn = document.getElementById("exploreBtn");
 
-if (exploreBtn) {
+if(exploreBtn){
 
-    exploreBtn.addEventListener("click", function () {
+exploreBtn.addEventListener("click",()=>{
 
-        document.getElementById("earth").scrollIntoView({
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-}
-
-// Search Box
-
-const searchBox = document.querySelector(".hero input");
-
-searchBox.addEventListener("keyup", function () {
-
-    let value = this.value.toLowerCase();
-
-    let cards = document.querySelectorAll(".card");
-
-    cards.forEach(function(card){
-
-        let text = card.innerText.toLowerCase();
-
-        if(text.includes(value)){
-
-            card.style.display="block";
-
-        }
-
-        else{
-
-            card.style.display="none";
-
-        }
-
-    });
-
-});
-
-/* ==========================================
-   UNIVERSE EXPLORER
-   SCRIPT.JS
-   PART 2
-========================================== */
-
-// Card Animation
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(function(card){
-
-    card.addEventListener("mouseenter",function(){
-
-        card.style.transform="translateY(-10px) scale(1.02)";
-
-    });
-
-    card.addEventListener("mouseleave",function(){
-
-        card.style.transform="translateY(0px) scale(1)";
-
-    });
-
-});
-
-// Scroll to Top when Logo is Clicked
-
-const title=document.querySelector(".hero h1");
-
-if(title){
-
-title.addEventListener("click",function(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
+window.location.href="earth.html";
 
 });
 
 }
 
-// Console Message
 
-console.log("Universe Explorer Loaded Successfully 🚀");
 
-/* ==========================================
-   UNIVERSE EXPLORER
-   SCRIPT.JS
-   PART 3
-========================================== */
 
-// Welcome Alert
+// Voice Search
 
-setTimeout(function () {
-    console.log("🌍 Welcome to Universe Explorer!");
-}, 1000);
+const voiceBtn = document.getElementById("voiceBtn");
 
-// Random Country Button
 
-const randomCountryBtn = document.getElementById("randomCountryBtn");
+if(voiceBtn && "webkitSpeechRecognition" in window){
 
-if (randomCountryBtn) {
 
-    const countries = [
-        "India 🇮🇳",
-        "Japan 🇯🇵",
-        "Brazil 🇧🇷",
-        "Canada 🇨🇦",
-        "Australia 🇦🇺",
-        "France 🇫🇷",
-        "Germany 🇩🇪",
-        "Egypt 🇪🇬"
-    ];
+voiceBtn.addEventListener("click",()=>{
 
-    randomCountryBtn.addEventListener("click", function () {
 
-        const random =
-            countries[Math.floor(Math.random() * countries.length)];
+let recognition = new webkitSpeechRecognition();
 
-        alert("🌍 Random Country:\n\n" + random);
 
-    });
+recognition.lang="en-US";
+
+
+recognition.start();
+
+
+
+recognition.onresult=function(event){
+
+
+let text = event.results[0][0].transcript;
+
+
+document.getElementById("searchBox").value=text;
+
+
+};
+
+
+
+});
+
 
 }
 
-// Random Planet Button
 
-const randomPlanetBtn = document.getElementById("randomPlanetBtn");
 
-if (randomPlanetBtn) {
 
-    const planets = [
-        "Mercury ☿",
-        "Venus ♀",
-        "Earth 🌍",
-        "Mars 🔴",
-        "Jupiter 🪐",
-        "Saturn 💍",
-        "Uranus",
-        "Neptune"
-    ];
+// Random Planet
 
-    randomPlanetBtn.addEventListener("click", function () {
+const randomPlanetBtn =
+document.getElementById("randomPlanetBtn");
 
-        const random =
-            planets[Math.floor(Math.random() * planets.length)];
 
-        alert("🪐 Random Planet:\n\n" + random);
+if(randomPlanetBtn){
 
-    });
+
+randomPlanetBtn.addEventListener("click",()=>{
+
+
+let planets=[
+
+"Mercury",
+
+"Venus",
+
+"Earth",
+
+"Mars",
+
+"Jupiter",
+
+"Saturn",
+
+"Uranus",
+
+"Neptune"
+
+];
+
+
+let random =
+planets[Math.floor(Math.random()*planets.length)];
+
+
+alert("🪐 Your Random Planet: "+random);
+
+
+});
+
 
 }
 
-console.log("🚀 Universe Explorer Script Loaded");
+
+
+
+// Random Country
+
+const randomCountryBtn =
+document.getElementById("randomCountryBtn");
+
+
+if(randomCountryBtn){
+
+
+randomCountryBtn.addEventListener("click",()=>{
+
+
+let countries=[
+
+"India 🇮🇳",
+
+"Japan 🇯🇵",
+
+"USA 🇺🇸",
+
+"Brazil 🇧🇷",
+
+"France 🇫🇷",
+
+"Australia 🇦🇺"
+
+];
+
+
+let random =
+countries[Math.floor(Math.random()*countries.length)];
+
+
+alert("🌍 Random Country: "+random);
+
+
+});
+
+
+}
+
+
+
+
+// Search System
+
+const searchBox =
+document.getElementById("searchBox");
+
+
+if(searchBox){
+
+
+searchBox.addEventListener("keyup",()=>{
+
+
+let value =
+searchBox.value.toLowerCase();
+
+
+
+let cards =
+document.querySelectorAll(".card");
+
+
+
+cards.forEach(card=>{
+
+
+let text =
+card.innerText.toLowerCase();
+
+
+
+if(text.includes(value)){
+
+
+card.style.display="block";
+
+
+}
+
+else{
+
+
+card.style.display="none";
+
+
+}
+
+
+
+});
+
+
+});
+
+
+}
+
+
+
+
+// Quiz Button
+
+const quizBtn =
+document.getElementById("quizBtn");
+
+
+if(quizBtn){
+
+
+quizBtn.addEventListener("click",()=>{
+
+
+let answer =
+prompt("🌍 Which planet is known as the Red Planet?");
+
+
+
+if(answer && answer.toLowerCase()=="mars"){
+
+
+alert("✅ Correct! Mars is the Red Planet.");
+
+
+}
+
+else{
+
+
+alert("❌ Try again! The answer is Mars.");
+
+
+}
+
+
+
+});
+
+
+}
+
+
+
+// Welcome Message
+
+console.log(
+"🌍 Universe Explorer Loaded Successfully 🚀"
+);
