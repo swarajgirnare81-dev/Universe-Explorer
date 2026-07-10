@@ -109,3 +109,73 @@ behavior:"smooth"
 // Console Message
 
 console.log("Universe Explorer Loaded Successfully 🚀");
+
+/* ==========================================
+   UNIVERSE EXPLORER
+   SCRIPT.JS
+   PART 3
+========================================== */
+
+// Welcome Alert
+
+setTimeout(function () {
+    console.log("🌍 Welcome to Universe Explorer!");
+}, 1000);
+
+// Random Country Button
+
+const randomCountryBtn = document.getElementById("randomCountryBtn");
+
+if (randomCountryBtn) {
+
+    const countries = [
+        "India 🇮🇳",
+        "Japan 🇯🇵",
+        "Brazil 🇧🇷",
+        "Canada 🇨🇦",
+        "Australia 🇦🇺",
+        "France 🇫🇷",
+        "Germany 🇩🇪",
+        "Egypt 🇪🇬"
+    ];
+
+    randomCountryBtn.addEventListener("click", function () {
+
+        const random =
+            countries[Math.floor(Math.random() * countries.length)];
+
+        alert("🌍 Random Country:\n\n" + random);
+
+    });
+
+}
+
+// Random Planet Button
+
+const randomPlanetBtn = document.getElementById("randomPlanetBtn");
+
+if (randomPlanetBtn) {
+
+    const planets = [
+        "Mercury ☿",
+        "Venus ♀",
+        "Earth 🌍",
+        "Mars 🔴",
+        "Jupiter 🪐",
+        "Saturn 💍",
+        "Uranus",
+        "Neptune"
+    ];
+
+    randomPlanetBtn.addEventListener("click", function () {
+
+        const random =
+            planets[Math.floor(Math.random() * planets.length)];
+
+        alert("🪐 Random Planet:\n\n" + random);
+
+    });
+
+}
+
+console.log("🚀 Universe Explorer Script Loaded");
