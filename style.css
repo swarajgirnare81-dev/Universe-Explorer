@@ -1,58 +1,31 @@
-/* ==========================================
-   UNIVERSE EXPLORER
-   PART 1
-   Background • Body • Header • Hero
-========================================== */
+/* 🌍 Universe Explorer Advanced Style */
+/* Part 1/3 */
+
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
+    font-family:'Poppins', sans-serif;
 }
+
 
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:linear-gradient(
-        135deg,
-        #020024,
-        #090979,
-        #000428,
-        #004e92,
-        #000000
+    background:
+    linear-gradient(
+    135deg,
+    #020024,
+    #090979,
+    #00d4ff
     );
-
-    background-size:400% 400%;
-
-    animation:spaceBackground 15s ease infinite;
 
     color:white;
 
     min-height:100vh;
 
-    overflow-x:hidden;
-
 }
 
-/* Animated Background */
-
-@keyframes spaceBackground{
-
-0%{
-background-position:0% 50%;
-}
-
-50%{
-background-position:100% 50%;
-}
-
-100%{
-background-position:0% 50%;
-}
-
-}
 
 /* Hero Section */
 
@@ -60,162 +33,120 @@ background-position:0% 50%;
 
     text-align:center;
 
-    padding:80px 20px;
+    padding:40px 20px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:0 0 40px 40px;
+
+    box-shadow:
+    0 0 30px rgba(0,255,255,0.5);
 
 }
 
-/* Main Title */
 
 .hero h1{
 
-    font-size:55px;
+    font-size:45px;
 
-    color:#00e5ff;
-
-    text-shadow:
-    0 0 10px cyan,
-    0 0 20px cyan,
-    0 0 40px cyan;
-
-    margin-bottom:20px;
+    margin-bottom:15px;
 
 }
 
-/* Subtitle */
 
 .hero p{
 
-    font-size:22px;
+    font-size:20px;
 
-    color:#eeeeee;
-
-    margin-bottom:35px;
+    margin-bottom:25px;
 
 }
 
-/* Search Box */
 
-.hero input{
+/* Search */
 
-    width:90%;
-    max-width:600px;
+input{
 
-    padding:16px;
+    width:80%;
+
+    max-width:500px;
+
+    padding:15px;
+
+    border-radius:30px;
 
     border:none;
 
     outline:none;
 
-    border-radius:50px;
-
-    font-size:18px;
-
-    background:rgba(255,255,255,0.12);
-
-    color:white;
-
-    backdrop-filter:blur(15px);
-
-    box-shadow:
-    0 0 15px rgba(0,255,255,.4);
+    font-size:16px;
 
 }
 
-/* Placeholder */
 
-.hero input::placeholder{
 
-    color:#dddddd;
 
-}
+/* Buttons */
 
-/* Explore Button */
+button{
 
-.hero button{
+    padding:12px 25px;
 
-    margin-top:25px;
-
-    padding:15px 40px;
+    margin:10px;
 
     border:none;
 
-    border-radius:50px;
+    border-radius:30px;
 
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
+    background:
+    linear-gradient(
+    45deg,
+    cyan,
+    blue
+    );
 
     color:white;
 
-    background:linear-gradient(
-    45deg,
-    #00e5ff,
-    #0072ff
-    );
+    font-size:16px;
 
-    transition:.4s;
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.08);
 
     box-shadow:
     0 0 20px cyan;
 
 }
 
-/* Button Hover */
 
-.hero button:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-    0 0 35px cyan;
-
-}
-
-/* Main Container */
-
-.container{
-
-    width:92%;
-
-    max-width:1400px;
-
-    margin:auto;
-
-    padding:40px 0;
-
-}
-
-/* ==========================================
-   UNIVERSE EXPLORER
-   PART 2
-   Navigation • Cards • Sections
-========================================== */
 
 /* Navigation */
 
 nav{
 
-    width:95%;
-
-    max-width:1300px;
-
-    margin:30px auto;
-
     display:flex;
 
     justify-content:center;
-
-    align-items:center;
 
     flex-wrap:wrap;
 
     gap:15px;
 
+    padding:20px;
+
 }
 
-/* Navigation Buttons */
+
 
 nav a{
 
@@ -223,147 +154,365 @@ nav a{
 
     color:white;
 
-    padding:12px 24px;
+    background:
+    rgba(255,255,255,0.15);
 
-    border-radius:30px;
+    padding:10px 20px;
 
-    background:rgba(255,255,255,.10);
+    border-radius:25px;
 
-    backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,.20);
-
-    transition:.4s;
-
-    font-weight:bold;
-
-    box-shadow:0 0 12px rgba(0,255,255,.25);
+    transition:0.3s;
 
 }
 
-/* Navigation Hover */
 
 nav a:hover{
 
-    background:#00e5ff;
+    background:cyan;
 
-    color:#000;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 0 25px cyan;
+    color:black;
 
 }
+
+
+
+
+/* Main Container */
+
+.container{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
 
 /* Cards */
 
 .card{
 
-    background:rgba(255,255,255,.08);
+    background:
+    rgba(255,255,255,0.12);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(15px);
 
-    border:1px solid rgba(255,255,255,.18);
+    padding:25px;
+
+    margin:25px 0;
 
     border-radius:25px;
 
-    padding:30px;
+    box-shadow:
+    0 0 25px rgba(0,255,255,0.3);
 
-    margin:30px 0;
-
-    transition:.4s;
-
-    box-shadow:0 0 20px rgba(0,255,255,.18);
+    transition:0.4s;
 
 }
 
-/* Card Hover */
 
 .card:hover{
 
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 0 35px cyan,
-    0 0 60px rgba(0,229,255,.35);
+    transform:translateY(-8px);
 
 }
 
-/* Card Heading */
 
 .card h2{
 
-    color:#00e5ff;
-
-    font-size:32px;
-
-    margin-bottom:18px;
-
-    text-shadow:0 0 10px cyan;
+    margin-bottom:15px;
 
 }
 
-/* Card Paragraph */
 
 .card p{
 
-    color:#f2f2f2;
-
-    line-height:1.8;
-
-    font-size:18px;
+    line-height:1.6;
 
 }
 
-/* Section Spacing */
+/* Part 2/3 */
 
-section{
 
-    scroll-margin-top:80px;
+/* Images */
 
-}
+.planet-image{
 
-/* Nice Divider */
+    width:100%;
 
-.card::after{
-
-    content:"";
+    max-width:500px;
 
     display:block;
 
-    width:80px;
+    margin:20px auto;
 
-    height:4px;
+    border-radius:25px;
+
+    box-shadow:
+    0 0 25px cyan;
+
+    transition:0.4s;
+
+}
+
+
+.planet-image:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+/* Hero Buttons */
+
+.button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
 
     margin-top:20px;
 
-    border-radius:20px;
+}
 
-    background:linear-gradient(
-    90deg,
-    cyan,
-    #0072ff
-    );
+
+
+
+/* Footer */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:30px;
+
+    background:
+    rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
 
 }
 
-/* Smooth Fade */
+
+
+
+/* Dark Mode */
+
+.dark-mode{
+
+    background:
+    #000;
+
+    color:white;
+
+}
+
+
+.dark-mode .card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+}
+
+
+.dark-mode nav a{
+
+    background:
+    rgba(255,255,255,0.2);
+
+}
+
+
+
+
+/* Quiz */
+
+.quiz-box{
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+
+.quiz-option{
+
+    display:block;
+
+    width:80%;
+
+    margin:10px auto;
+
+}
+
+
+
+
+
+/* Animations */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+.hero h1{
+
+    animation:float 4s infinite;
+
+}
+
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:700px){
+
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+
+nav{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+nav a{
+
+    width:80%;
+
+    text-align:center;
+
+}
+
 
 .card{
 
-    animation:fadeUp 1s ease;
+    padding:18px;
 
 }
 
-@keyframes fadeUp{
+
+button{
+
+    width:90%;
+
+}
+
+
+
+}
+
+/* Part 3/3 */
+
+
+/* Extra Glow Effects */
+
+.card:nth-child(even){
+
+    box-shadow:
+    0 0 30px rgba(0,200,255,0.4);
+
+}
+
+
+.card:nth-child(odd){
+
+    box-shadow:
+    0 0 30px rgba(120,0,255,0.4);
+
+}
+
+
+
+
+/* Section Titles */
+
+h1,h2{
+
+    text-shadow:
+    0 0 15px cyan;
+
+}
+
+
+
+
+/* Links inside cards */
+
+.card a{
+
+    text-decoration:none;
+
+}
+
+
+
+
+/* Loading Animation */
+
+@keyframes appear{
 
     from{
 
         opacity:0;
 
-        transform:translateY(40px);
+        transform:translateY(30px);
 
     }
+
 
     to{
 
@@ -375,264 +524,152 @@ section{
 
 }
 
-/* ==========================================
-   UNIVERSE EXPLORER
-   PART 3
-   Footer • Responsive • Final Effects
-========================================== */
 
-/* Footer */
-
-footer{
-
-    margin-top:60px;
-
-    padding:30px;
-
-    text-align:center;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(15px);
-
-    border-top:1px solid rgba(255,255,255,.20);
-
-}
-
-footer p{
-
-    color:white;
-
-    font-size:17px;
-
-    letter-spacing:1px;
-
-}
-
-/* Scroll Bar */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#000814;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:cyan;
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#00bfff;
-
-}
-
-/* Selection */
-
-::selection{
-
-    background:cyan;
-
-    color:black;
-
-}
-
-/* Floating Animation */
-
-@keyframes floating{
-
-0%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
-100%{
-
-transform:translateY(0px);
-
-}
-
-}
-
-.hero h1{
-
-    animation:floating 4s ease-in-out infinite;
-
-}
-
-/* Fade Animation */
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-body{
-
-    animation:fadeIn 1s;
-
-}
-
-/* Mobile Responsive */
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.hero input{
-
-width:95%;
-
-font-size:16px;
-
-}
-
-.hero button{
-
-width:90%;
-
-font-size:18px;
-
-}
-
-nav{
-
-flex-direction:column;
-
-}
-
-nav a{
-
-width:90%;
-
-text-align:center;
-
-}
 
 .card{
 
-padding:22px;
+    animation:appear 0.8s ease;
 
 }
+
+
+
+
+
+/* Smooth Scrolling */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+
+
+/* Special Explorer Button */
+
+#exploreBtn{
+
+    background:
+
+    linear-gradient(
+    45deg,
+    orange,
+    red
+    );
+
+}
+
+
+
+
+
+/* Voice Button */
+
+#voiceBtn{
+
+    background:
+
+    linear-gradient(
+    45deg,
+    purple,
+    pink
+    );
+
+}
+
+
+
+
+
+/* Random Buttons */
+
+#randomPlanetBtn,
+#randomCountryBtn{
+
+    background:
+
+    linear-gradient(
+    45deg,
+    green,
+    cyan
+    );
+
+}
+
+
+
+
+/* Image Gallery */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    transition:0.4s;
+
+}
+
+
+
+.gallery img:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+/* Mobile Final Adjustment */
+
+@media(max-width:500px){
+
+
+.hero{
+
+    padding:25px 10px;
+
+}
+
+
+input{
+
+    width:95%;
+
+}
+
 
 .card h2{
 
-font-size:26px;
+    font-size:22px;
 
 }
+
 
 .card p{
 
-font-size:16px;
+    font-size:15px;
 
 }
 
-footer{
 
-padding:20px;
-
-}
-
-}
-
-/* End of Universe Explorer CSS */
-
-/* Planet Images */
-
-.planet-image{
-
-width:100%;
-
-max-width:500px;
-
-display:block;
-
-margin:20px auto;
-
-border-radius:20px;
-
-box-shadow:0 0 25px cyan;
-
-transition:.4s;
-
-}
-
-.planet-image:hover{
-
-transform:scale(1.05);
-
-}
-
-/* Continent Buttons */
-
-.card button{
-
-padding:12px 25px;
-
-margin:10px;
-
-border:none;
-
-border-radius:30px;
-
-background:linear-gradient(
-45deg,
-cyan,
-blue
-);
-
-color:white;
-
-font-size:16px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.card button:hover{
-
-transform:scale(1.08);
-
-box-shadow:0 0 20px cyan;
-
-}
+   }
